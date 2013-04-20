@@ -1,0 +1,14 @@
+Django==1.5.1
+Mezzanine==1.4.5
+Pillow==2.0.0
+argparse==1.2.1
+bleach==1.2.1
+distribute==0.6.34
+dj-database-url==0.2.1
+filebrowser-safe==0.2.26
+grappelli-safe==0.2.21
+gunicorn==0.17.2
+html5lib==0.95
+psycopg2==2.5
+pytz==2013b
+wsgiref==0.1.2
