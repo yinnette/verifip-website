@@ -153,7 +153,7 @@ STATICFILES_FINDERS = (
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
         "NAME": "",
         # Not used with sqlite3.
@@ -351,12 +351,9 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 
-
 #settings for heroku
 if not DEBUG:
-	import dj_database_url
-	DATABASES['default'] = dj_database_url.config()
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
 
-	SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
