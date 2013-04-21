@@ -1,2 +1,2 @@
-web: gunicorn verifip-website.wsgi
+web: gunicorn wsgi
 
