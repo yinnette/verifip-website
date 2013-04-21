@@ -1,0 +1,43 @@
+/* Verifip.com Assets - grid.less 
+
+Based on the 4 col gid system */
+
+.row {
+	display: inline-block; 
+	clear: both;
+	width: 100%;
+}
+[class*="col"] {
+	display: inline-block;
+	margin-right: -4px;
+	padding: 20px;
+	vertical-align: top;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+}
+.col1 {width:25%}
+.col2 {width:50%}
+.col3 {width:75%}
+.col4 {width:100%}
+
+
+/* Tablet Portrait */
+@media screen and (min-width:768px) and (max-width: 1023px) {
+
+	.col1-tablet {width:25%}
+	.col2-tablet {width:50%}
+	.col3-tablet {width:75%}
+	.col4-tablet {width:100%}
+
+}
+/* Mobile Phone Ladscape */
+@media screen and (max-width: 767px) {
+
+	.col1-phone {width:25%}
+	.col2-phone {width:50%}
+	.col3-phone {width:75%}
+	.col4-phone {width:100%}
+
+}
