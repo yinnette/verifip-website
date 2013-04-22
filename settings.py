@@ -353,8 +353,8 @@ else:
 #settings for heroku
 
 # Django Storages/S3 Settings
-DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
-STATICFILES_STORAGE = 's3utils.StaticRootS3BotoStorage'
+DEFAULT_FILE_STORAGE = 'libs.storages.S3Storage.S3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 # AWS Settings
 AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
