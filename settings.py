@@ -362,6 +362,7 @@ STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'verifip-website'
+AWS_QUERYSTRING_AUTH = False
 
 
 if not DEBUG:
