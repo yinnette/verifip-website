@@ -183,7 +183,7 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_DIRNAME
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = "/static/"
+STATIC_URL = "https://s3.amazonaws.com/verifip-website/"
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -351,7 +351,8 @@ else:
 
 #settings for heroku
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+if not DEBUG:
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
