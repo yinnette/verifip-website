@@ -112,7 +112,7 @@ LANGUAGE_CODE = "en"
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -362,7 +362,7 @@ STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'verifip-website'
-#AWS_QUERYSTRING_AUTH = False
+AWS_QUERYSTRING_AUTH = False
 
 
 if not DEBUG:
