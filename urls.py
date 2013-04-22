@@ -87,7 +87,7 @@ urlpatterns = patterns("",
 
 if not settings.DEBUG:
     urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.staticfiles.views.serve', {'document_root': settings.STATIC_ROOT}),
+        (r'^static/(?P<path>.*)$', 'django.sontrib.staticfiles.views.serve', {'document_root': settings.STATIC_ROOT}),
     )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
