@@ -1,2 +1,2 @@
-web: python manage.py collectstatic; gunicorn wsgi
+web: python manage.py collectstatic --noimput; gunicorn wsgi
 
