@@ -4,7 +4,7 @@
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 
 {% block main %}
-{% blocktrans %}
+
 <a href="#" class="return-link">Return To Top</a>
 <section id="home" class="row page home-page">
   <article>
@@ -18,9 +18,10 @@
       <h1 class="inverse">Know what you own. Own what you know.</h1>
     </div>
     <div class="row">
-      <form class="quick-form">
+      <form action="" method="POST" class="quick-form">
+        {% csrf_token %}
         <input type="text" name="name" placeholder="Your Full Name">
-        <input type="text" name="name" placeholder="Your Email">
+        <input type="text" name="email" placeholder="Your Email">
         <button class="btn btn-gray btn-large">Sign Up</button>
       </form>
     </div>
@@ -219,17 +220,18 @@
     </div>
     <div class="col2 col4-phone">
       <div class="row">
-        <form class="more-info row">
+        <form action="" method="POST" class="more-info row">
+          {% csrf_token %}
           <label>Need more information? Fill our the form below.</label>
           <input type="text" name="name" placeholder="Your Full Name">
-          <input type="text" name="name" placeholder="Your Email">
-          <input type="text" name="name" placeholder="Your Phone Number">
-          <textarea placeholder="Your Message"></textarea>
+          <input type="text" name="email" placeholder="Your Email">
+          <input type="text" name="phone" placeholder="Your Phone Number">
+          <textarea name="message" placeholder="Your Message"></textarea>
           <button class="btn btn-green btn-inverse btn-large">Contact Me With More Information</button>
         </form>
       </div>
     </div>
   </article>
 </section>
-{% endblocktrans %}
+
 {% endblock %}
