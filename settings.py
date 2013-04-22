@@ -235,6 +235,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
+    "storages",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -350,6 +351,16 @@ else:
     set_dynamic_settings(globals())
 
 #settings for heroku
+
+# Django Storages/S3 Settings
+DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
+STATICFILES_STORAGE = 's3utils.StaticRootS3BotoStorage'
+
+# AWS Settings
+AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'verifip-website'
+
 
 if not DEBUG:
     import dj_database_url
