@@ -355,14 +355,14 @@ else:
 #settings for heroku
 
 # Django Storages/S3 Settings
-DEFAULT_FILE_STORAGE = 'libs.storages.S3Storage.S3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+#DEFAULT_FILE_STORAGE = 'libs.storages.S3Storage.S3Storage'
+#STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 # AWS Settings
-AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'verifip-website'
-AWS_QUERYSTRING_AUTH = False
+#AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
+#AWS_SECRET_ACCESS_KEY = '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'
+#AWS_STORAGE_BUCKET_NAME = 'verifip-website'
+#AWS_QUERYSTRING_AUTH = False
 
 
 if not DEBUG:
