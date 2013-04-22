@@ -200,7 +200,7 @@ MEDIA_URL = STATIC_URL + "media/"
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 #MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
-MEDIA_ROOT = MEDIA_URL
+#MEDIA_ROOT = MEDIA_URL
 
 # Package/module name to import the root urlpatterns from for the project.
 #ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
@@ -355,14 +355,14 @@ else:
 #settings for heroku
 
 # Django Storages/S3 Settings
-DEFAULT_FILE_STORAGE = 'libs.storages.S3Storage.S3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 # AWS Settings
 AWS_ACCESS_KEY_ID = 'AKIAIPKBMFNE67H33VZQ'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'verifip-website'
-AWS_QUERYSTRING_AUTH = False
+#AWS_QUERYSTRING_AUTH = False
 
 
 if not DEBUG:
