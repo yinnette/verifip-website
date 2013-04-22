@@ -153,20 +153,14 @@ STATICFILES_FINDERS = (
 #############
 
 DATABASES = {
-    "default": {
-        # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        # DB name or path to database file if using sqlite3.
-        "NAME": "",
-        # Not used with sqlite3.
-        "USER": "",
-        # Not used with sqlite3.
-        "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
-        # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
-    }
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'dag2isrsojr5i6',
+    'HOST': 'ec2-54-225-105-169.compute-1.amazonaws.com',
+    'PORT': 5432,
+    'USER': 'jjtoeagcyfrrcw',
+    'PASSWORD': 'DcgGmDyZtQAaUMQoXy1DObFbQC'
+  }
 }
 
 
@@ -331,10 +325,11 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # Allow any settings to be defined in local_settings.py which should be
 # ignored in your version control system allowing for settings to be
 # defined per machine.
-try:
-    from local_settings import *
-except ImportError:
-    pass
+if DEBUG:
+    try:
+        from local_settings import *
+    except ImportError:
+        pass
 
 
 ####################
