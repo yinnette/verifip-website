@@ -1,0 +1,37 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags %}
+
+{% block extra_js %}
+{{ block.super }}
+<script>
+$(function() {$('.middle :input:visible:enabled:first').focus();});
+</script>
+{% endblock %}
+
+{% block main %}
+{{ block.super }}
+{% if request.GET.sent %}
+    {% editable page.form.response %}
+    {{ page.form.response|richtext_filter|safe }}
+    {% endeditable %}
+{% else %}
+<div class="col2 col4-phone">
+    <div class="row">
+    {% with page.form as page_form %}
+    {% editable page_form.content %}
+    {{ page_form.content|richtext_filter|safe }}
+    {% endeditable %}
+    {% endwith %}
+    <form class="more-info row" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+        {% fields_for form %}
+        <div class="form-actions">
+            <button class="btn btn-green btn-inverse btn-large">{{ page.form.button_text }}</button>
+        </div>
+    </form>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+

@@ -112,7 +112,7 @@ LANGUAGE_CODE = "en"
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -328,11 +328,11 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # Allow any settings to be defined in local_settings.py which should be
 # ignored in your version control system allowing for settings to be
 # defined per machine.
-if DEBUG:
-    try:
-        from local_settings import *
-    except ImportError:
-        pass
+#if DEBUG:
+#    try:
+#        from local_settings import *
+#    except ImportError:
+#        pass
 
 
 ####################
@@ -365,8 +365,8 @@ AWS_STORAGE_BUCKET_NAME = 'verifip-website'
 AWS_QUERYSTRING_AUTH = False
 
 
-if not DEBUG:
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
+#if not DEBUG:
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
 
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

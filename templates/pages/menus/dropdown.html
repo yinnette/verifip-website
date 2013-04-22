@@ -3,6 +3,7 @@
 {% if page_branch_in_menu %}
 
 {% if branch_level == 0 %}
+  <li><a href="/#contact" class="menu-item contact-link btn btn-start hide-phone">Get Started</a></li>
 
   {% for page in page_branch %}
   {% if page.in_menu %}
@@ -20,11 +21,11 @@
     <a href="#" class="menu-item learn-more hide-tablet">Learn More</a>
     <ul class="level-2">
       <li><i class="arrow"></i></li>
-      <li><a href="#" class="menu-item feature-link">VerifIP&reg; Features</a></li>
-      <li><a href="#" class="menu-item social-link">Social Plugins</a></li>
-      <li><a href="#" class="menu-item alerts-link">Alerts and Reminders</a></li>
-      <li><a href="#" class="menu-item brands-link">Our Clients</a></li>
-      <li><a href="#" class="menu-item contact-link">Get More Info</a></li>
+      <li><a href="/#features" class="menu-item feature-link">VerifIP&reg; Features</a></li>
+      <li><a href="/#social" class="menu-item social-link">Social Plugins</a></li>
+      <li><a href="/#alerts" class="menu-item alerts-link">Alerts and Reminders</a></li>
+      <li><a href="/#brands" class="menu-item brands-link">Our Clients</a></li>
+      <li><a href="/#contact" class="menu-item contact-link">Get More Info</a></li>
     </ul>
   </li>
 {% endif %}

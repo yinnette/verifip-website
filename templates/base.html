@@ -23,7 +23,13 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 {% compress js %}
-<script src="{% static "js/verifip.js" %}" type="text/javascript"></script>
+<script>
+$(function() { 
+  $(".learn-more").click(function() {
+    $(this).next(".level-2").toggleClass("active"); 
+  });
+});
+</script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 
@@ -35,11 +41,10 @@
 
 <header class="row">
   <hgroup>
-    <a href="#" class="logo"></a>
+    <a href="/" class="logo"></a>
     <div class="main-nav">
       <nav>
         <ul>
-          <li><a href="#" class="menu-item  btn btn-start hide-phone">Get Started</a></li>
         
           {% page_menu "pages/menus/dropdown.html" %}
 
@@ -63,7 +68,9 @@
 <footer class="row">
   <article>
     <nav>
+      <!--
       {% page_menu "pages/menus/footer.html" %}
+      -->
       <ul>
         <li><a href="#" class="back-up" >Back To Top</a></li>
         <li><a href="#">Sign Up</a></li>
